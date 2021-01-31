@@ -45,6 +45,8 @@ public class login extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(0, 0, 102));
 
+        txtUsuario.setText("samv");
+
         jButton1.setBackground(new java.awt.Color(51, 0, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,6 +68,8 @@ public class login extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\samv\\Downloads\\a\\login.png")); // NOI18N
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        txtPassword.setText("12345");
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);

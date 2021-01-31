@@ -5,8 +5,15 @@
  */
 package ventas.ventanas;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import ventas.configuraciones.globales;
+
+import ventas.ventanas.paneles.frmCategorias;
+import ventas.ventanas.paneles.frmProducto;
+import ventas.ventanas.paneles.frmVentas;
+
 
 /**
  *
@@ -19,6 +26,20 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      */
     public ventanaPrincipal() {
         initComponents();
+        
+        
+        
+       
+      
+        
+        
+
+        
+        setSize(700,500);
+        
+        
+      
+        
     }
 
     /**
@@ -30,11 +51,19 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        body = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        body.setBackground(new java.awt.Color(255, 255, 255));
+        body.setLayout(new java.awt.CardLayout());
+        getContentPane().add(body, java.awt.BorderLayout.CENTER);
 
         jMenu1.setText("Catalogos");
 
@@ -47,20 +76,31 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jCheckBoxMenuItem1);
 
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("Productos");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem2);
+
         jMenuBar1.add(jMenu1);
 
-        setJMenuBar(jMenuBar1);
+        jMenu2.setText("Ventas");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 383, Short.MAX_VALUE)
-        );
+        jCheckBoxMenuItem3.setSelected(true);
+        jCheckBoxMenuItem3.setText("Caja");
+        jCheckBoxMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jCheckBoxMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -69,12 +109,31 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         
         
-        new frmCategoria().setVisible(true);
-        
+       
+     frmCategorias m = new frmCategorias();
+     
+     m.setVisible(true);
         
         
         
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+    
+        
+        frmProducto producto = new frmProducto();
+        
+        producto.setVisible(true);
+           
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void jCheckBoxMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem3ActionPerformed
+        
+        
+        frmVentas v = new frmVentas();
+        v.setVisible(true);
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,8 +141,12 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel body;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
